@@ -15,3 +15,26 @@
 </script>
 </body>
 </html>
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8"/>
+    <title>Smart APP</title>
+    <script src="https://cdn.jsdelivr.net/npm/fhirclient/build/fhir-client.js"></script>
+</head>
+<body>
+<p>Authorizing.....</p>
+<script>
+        FHIR.oauth2.authorize({
+              clientId: "93f275d9-d524-4cf2-889a-08b55fc8255e",
+              scope: "patient/Patient.read patient/Observation.read launch online_access openid profile",
+              iss:"https://fhir-ehr-code.cerner.com/dstu2/ec2458f2-1e24-41c8-b71b-0e701af7583d",
+              patientId:"12724065",
+              redirectUri: "https://abhilive1995.github.io/smart-on-fhir-tutorial/example-smart-app/index.html",
+              response_type:"code"
+            });
+</script>
+</body>
+</html>
